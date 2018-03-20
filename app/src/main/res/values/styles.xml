@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
+
+    <style name="StandardPage">
+        <item name="android:background">#E3FFFF</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="borderCurvedEdges">
+        <item name="android:background">@drawable/customborder</item>
+    </style>
+
+    <style name="borderOutline">
+        <item name="android:background">@drawable/borderoutline</item>
+    </style>
+
+</resources>

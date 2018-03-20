@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Strings -->
+    <string name="app_name">Fuel Up Tracker</string>
+    <string name="app_navigation_drawer_open">Open navigation drawer</string>
+    <string name="app_navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_action_settings">Settings</string> <!-- Not really used -->
+
+    <!-- Page Headers -->
+    <string name="header_exploreData">Explore Data</string>
+    <string name="header_viewAllEntries">View Fuel-Up Entries</string>
+    <string name="header_viewSingleEntry">View Fuel-Up Entry</string>
+    <string name="header_newEntry">New Fuel-Up Entry</string>
+    <string name="header_settings">Settings</string>
+
+    <!-- Navigation bar Titles -->
+    <string name="navBar_ViewDataHeader">View Fuel-Up Entries</string>
+    <string name="navBar_ViewAveragesHeader">Explore Data</string>
+    <string name="navBar_NewEntryHeader">Add New Entry</string>
+
+</resources>

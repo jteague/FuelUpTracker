@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="HeaderFont" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="SubHeaderFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="SubHeaderFontBackground" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:background">@drawable/subheaderborder</item>
+    </style>
+
+    <style name="itemText" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#222222</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="itemTextItalics" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#222222</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="ListMonthFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginRight">6dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="threeLetterMonth">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#222222</item>
+    </style>
+    <style name="numberDayOfMonth">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="year">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#222222</item>
+    </style>
+
+</resources>

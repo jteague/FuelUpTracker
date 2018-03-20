@@ -1,0 +1,52 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jeremiahteague.fueluptracker.GUI.ViewData"
+    android:id="@+id/tableLayout"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/StandardPage"
+    >
+
+        <TextView
+            style="@style/HeaderFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/header_viewAllEntries"
+        />
+
+    <LinearLayout
+        style="@style/borderCurvedEdges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            style="@style/SubHeaderFont"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/entryCount"
+            android:text="0 entries"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        >
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_column="0"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="false"/>
+
+    </LinearLayout>
+
+</LinearLayout>

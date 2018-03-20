@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/entry_list_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dip" >
+
+    <LinearLayout
+        android:id="@+id/listView_rl_date"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/listView_Mon"
+            style="@style/threeLetterMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Nov" />
+
+        <TextView
+            android:id="@+id/listView_DayNum"
+            style="@style/numberDayOfMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="18"/>
+
+        <TextView
+            android:id="@+id/listView_year"
+            style="@style/year"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:text="2015" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/listView_rl_space"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingRight="20dp"
+        >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_lineInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/listView_location"
+            style="@style/itemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Location"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/listView_odometer"
+            style="@style/itemTextItalics"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:text="Odometer"
+            android:gravity="bottom"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

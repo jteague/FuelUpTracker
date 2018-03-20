@@ -1,0 +1,594 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_averages"
+    tools:context="com.jeremiahteague.fueluptracker.GUI.Averages"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/StandardPage"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/HeaderFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/header_exploreData"
+        />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/borderCurvedEdges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SubHeaderFontBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Averages:"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Days Between Fuel Ups: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtAverageDaysBetween"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Fuel Up Cost: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtAverageFuelUpCost"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Gallons Bought Per Fuel-Up: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtAverageGallonsBought"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="match_parent"
+                        android:text="Price Per Gallon: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtAveragePricePerGallon"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Miles Driven Per Fuel-Up: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtAverageMilesDriven"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Cost Per Mile: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtAverageCostPerMile"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Miles Per Gallon: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtAverageMPG"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:text="Favorite Gas Station: " />
+
+                    <TextView
+                        android:id="@+id/txtMostFrequentGasStation"
+                        style="@style/itemTextItalics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:autoText="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/borderCurvedEdges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SubHeaderFontBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Minimums:"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Days Between Fuel Ups: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMinDaysBetween"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Fuel Up Cost: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMinFuelUpCost"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Gallons Bought Per Fuel-Up: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMinGallonsBought"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="match_parent"
+                        android:text="Price Per Gallon: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMinPricePerGallon"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Miles Driven Per Fuel-Up: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMinMilesDriven"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Cost Per Mile: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMinCostPerMile"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Miles Per Gallon: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMinMPG"
+                        android:autoText="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/borderCurvedEdges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SubHeaderFontBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Maximums:"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Days Between Fuel Ups: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMaxDaysBetween"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Fuel Up Cost: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMaxFuelUpCost"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Gallons Bought Per Fuel-Up: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMaxGallonsBought"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="match_parent"
+                        android:text="Price Per Gallon: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMaxPricePerGallon"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Miles Driven Per Fuel-Up: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMaxMilesDriven"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Cost Per Mile: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMaxCostPerMile"
+                        android:autoText="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".65"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Miles Per Gallon: " />
+
+                    <TextView
+                        style="@style/itemTextItalics"
+                        android:layout_width="0dp"
+                        android:layout_weight=".35"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:id="@+id/txtMaxMPG"
+                        android:autoText="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,325 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.jeremiahteague.fueluptracker.GUI.ViewData_Entry"
+    style="@style/StandardPage"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/HeaderFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/header_viewSingleEntry"
+            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    style="@style/itemText"
+                    android:layout_weight=".4"
+                    android:layout_gravity="left"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/entry_lblDate"
+                    android:text="Date:" />
+
+                <TextView
+                    android:id="@+id/entry_txtDate"
+                    style="@style/itemText"
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:layout_gravity="right"
+                    android:layout_height="30dp"
+                    android:inputType="date"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    style="@style/itemText"
+                    android:layout_weight=".4"
+                    android:layout_gravity="left"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:id="@+id/entry_lblLocation"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/entry_txtLocation"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    style="@style/itemText"
+                    android:layout_weight=".4"
+                    android:layout_gravity="left"
+                    android:layout_height="wrap_content"
+                    android:text="Price Per Gallon"
+                    android:id="@+id/entry_lblPricePerGallon"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/entry_txtPricePerGallon"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    style="@style/itemText"
+                    android:layout_weight=".4"
+                    android:layout_gravity="left"
+                    android:layout_height="wrap_content"
+                    android:text="Odometer"
+                    android:id="@+id/entry_lblOdometer"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:id="@+id/entry_txtOdometer"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    style="@style/itemText"
+                    android:layout_weight=".4"
+                    android:layout_gravity="left"
+                    android:layout_height="wrap_content"
+                    android:text="Gallons Bought"
+                    android:id="@+id/entry_lblGallonsBought"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/entry_txtGallonsBought"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    style="@style/itemText"
+                    android:layout_weight=".4"
+                    android:layout_gravity="left"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price"
+                    android:id="@+id/entry_lblTotalPrice"
+                    />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight=".6"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/entry_txtTotalPrice"
+                    android:hint="optional"
+                    android:onClick="click_totalPrice"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/borderCurvedEdges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        style="@style/itemTextItalics"
+                        android:layout_weight=".4"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Miles driven:"
+                        android:id="@+id/entry_lblDistanceDrivenKey"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/entry_lblDistanceDrivenValue"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        style="@style/itemTextItalics"
+                        android:layout_weight=".4"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Cost per mile:"
+                        android:id="@+id/entry_lblPricePerDistanceUnitKey"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:id="@+id/entry_lblPricePerDistanceUnitValue"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        style="@style/itemTextItalics"
+                        android:layout_weight=".4"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Miles per gallon:"
+                        android:id="@+id/entry_lblDistanceUnitPerGallonKey"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/entry_lblDistanceUnitPerGallonValue"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        style="@style/itemTextItalics"
+                        android:layout_weight=".4"
+                        android:layout_gravity="left"
+                        android:layout_height="wrap_content"
+                        android:text="Days since fill up: "
+                        android:id="@+id/entry_lblDaysSinceFillUpKey"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:layout_gravity="right"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/entry_lblDaysSinceFillUpValue"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight=".33"
+                    android:layout_gravity="left"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:id="@+id/entry_btnDelete"
+                    />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight=".33"
+                    android:layout_gravity="right"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:id="@+id/entry_btnSave"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
